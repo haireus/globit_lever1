@@ -1,0 +1,442 @@
+:root {
+    --color-primary-light: #7ed56f;
+    --color-primary-dark: #28b485;
+    --color-secondary-light: #7579ff;
+    --color-secondary-dark: #b224ef;
+
+}
+
+html {
+    font-size: 62.5%;
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+.navigation__nav {
+    height: 100vh;
+    background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+    position: relative;
+}
+
+.navigation__nav .navigation__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+}
+
+.navigation__item {
+    margin: 1rem;
+
+}
+
+.navigation__link:link,
+.navigation__link:visited {
+    display: inline-block;
+    font-size: 3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+    background-size: 225%;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 10rem;
+
+}
+
+.navigation__link:hover {
+    color: var(--color-primary-dark);
+    background-position: 100%;
+    transform: translateX(1rem);
+}
+
+
+
+/* BAI 2 */
+.a1 {
+    position: relative;
+    width: 100rem;
+    height: 200rem;
+    background-color: var(--color-primary-light);
+}
+
+.a2 {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    text-align: center;
+    font-size: 2.4rem;
+    line-height: 4.4rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.a3 {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    background-color: red;
+    color: bisque;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 2.4rem;
+    line-height: 4.4rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.a4 {
+    width: 90rem;
+    height: 60rem;
+    border: 2px solid black;
+    border-radius: 10px;
+    position: relative;
+    top: 10rem;
+    left: 0;
+
+}
+
+.a5 {
+    width: 60rem;
+    height: 20rem;
+    border-radius: 2rem;
+    border: 2px solid orangered;
+    position: sticky;
+    top: 40vh;
+    left: 20rem;
+    font-size: 1.4rem;
+}
+
+
+.a6 {
+    border: white 2px solid;
+    width: 25rem;
+    height: 10rem;
+    border-radius: 1rem;
+    z-index: 1000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    font-size: 1.4rem;
+    color: black;
+
+}
+
+/* RESPONSIVE */
+
+@media (max-width:780px) {
+    .a1 {
+        width: 500rem;
+    }
+
+    .a2,
+    .a3 {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .a4 {
+        width: 45rem;
+    }
+
+    .a5 {
+        width: 30rem;
+    }
+
+}
+
+
+
+
+
+
+/*************************************/
+/* bai so 3 */
+
+.bai3__main {
+    font-size: 1.5rem;
+    color: white;
+
+
+
+
+
+}
+
+.bai3__list {
+    display: inline-block;
+    padding: 1rem 2rem;
+    width: 15rem;
+    height: 5rem;
+
+    border: 1px solid purple;
+    margin: 1rem;
+}
+
+.sochan {
+    background-color: var(--color-primary-dark);
+}
+
+.sole {
+    background-color: rgba(255, 0, 0, 0.692);
+}
+
+
+
+/********************
+BAI SO 5
+/
+/*phần tử phủ toàn màn hình*/
+#over {
+    display: none;
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 100;
+}
+
+a,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+/* lớp login - cửa sổ đăng nhập*/
+.login, .reset {
+    background-color: rgb(60, 187, 103);
+    height: auto;
+    width: 450px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 5px 5px 40px 5px;
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1000;
+    /*đặt z-index để nó nổi bật và chồng lên phần tử khác trong trang*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.success {
+    z-index: 2000;
+    background-color: rgb(60, 187, 103);
+    height: 150px;
+    width: 300px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 30px;
+
+    overflow: hidden;
+    position: absolute;
+
+    /*đặt z-index để nó nổi bật và chồng lên phần tử khác trong trang*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+
+    color: #fff;
+    text-align: center;
+    display: none;
+}
+
+.success_title {
+    margin: 0 auto;
+    text-transform: uppercase;
+    padding-top: 30px;
+    display: inline-block;
+
+
+}
+
+.success .img-close {
+    margin-top: -115px;
+    margin-right: 5px;
+}
+
+
+
+
+.login .login_title, .reset .reset_title {
+    color: white;
+    font-size: 16px;
+    padding: 8px 0 5px 8px;
+    text-align: center;
+
+    text-transform: uppercase;
+}
+
+.login-content label, .reset-content label {
+    display: block;
+    padding-bottom: 7px;
+}
+
+.login-content span ,.reset-content span {
+    display: block;
+}
+
+.login-content , .reset-content {
+    padding-left: 35px;
+    background-color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: auto;
+    padding-top: 15px;
+    overflow: hidden;
+}
+
+.username,
+.password {
+    position: relative;
+    margin-bottom: 25px;
+
+}
+
+.username span,
+.password span {
+    margin-bottom: 5px;
+}
+
+.login-content small, .reset-content small {
+    color: var(--error-color);
+    position: absolute;
+    bottom: -11px;
+    left: 14px;
+    margin-top: 2px;
+    color: rgb(240, 62, 17);
+    visibility: hidden;
+
+}
+
+.login-content.error small, .reset-content.error small {
+    visibility: visible;
+}
+
+.img-close {
+    float: right;
+    margin-top: -43px;
+    margin-right: 5px
+}
+
+.button {
+    display: inline-block;
+    min-width: 46px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    height: 36px;
+    padding: 0px 8px;
+    line-height: 36px;
+    border-radius: 4px;
+    transition: all 0.218s ease 0s;
+    border: 1px solid #DCDCDC;
+    background-color: rgba(2, 126, 54, 0.671);
+    background-image: -moz-linear-gradient(center top, #F5F5F5, #F1F1F1);
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 20px 30px
+}
+
+.button:hover {
+    border: 1px solid #DCDCDC;
+    text-decoration: none;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    color: white;
+    background-color: rgba(2, 126, 54, 0.822);
+}
+
+.login input, .reset input {
+    border: 1px solid #D5D5D5;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .07) inset;
+    color: black;
+    font: 12px/25px "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 28px;
+    padding: 0px 8px;
+    word-spacing: 0.1em;
+    width: 300px;
+}
+
+.submit-button {
+   display: inline-block;
+   width: 200px;
+   height: 40px;
+   border:  2px solid rgb(110, 106, 106);
+   color: #fff;
+   font-size: 19px;
+   font-weight: bold;
+   text-transform: uppercase;
+   text-align: center;
+   text-decoration: none;
+   line-height: 19px;
+   box-sizing: border-box;
+   border-radius: 50px ;
+   background-color: transparent;
+   outline: none;
+   transition: all ease .5s;
+    background-color: #28b43bab;
+    margin-bottom: 18px;
+}
+
+.submit-button:hover {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.submit-button:focus {
+    outline: none;
+
+} 
+
+.active {
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-left-color: transparent;
+    animation: rotate 1.4s ease 0.5s infinite;
+    background-color: transparent ;
+    
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(360deg);
+      }
+}
+
+
+.forgot a{
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/*------------------------- BAI 6 -----------------------*/
+

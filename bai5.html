@@ -1,0 +1,70 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>exercise 05</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+    <script type="text/javascript" src="dialog.js"></script>
+</head>
+
+<body>
+    <a href="#login-box" class="login-window button">LOG IN</a>
+    <div id="login-box" class="login">
+        <p class="login_title">Member Login</p>
+        <a href="#" class="close"><img src="close.png" class="img-close" title="Close Window" alt="Close" /></a>
+        <form method="post" class="login-content" id="login-content" action="#">
+            <label class="username">
+                <span>Username</span>
+                <input id="username" name="username" value="" type="text" placeholder="Username" />
+                <div id="user_error"></div>
+            </label>
+            <label class="password">
+                <span>Password</span>
+                <input id="password" name="password" value="" type="password" placeholder="Password" />
+                <div id="pass_error"></div>
+            </label>
+            <button class="submit-button" id="submit" type="button">
+                Log In
+            </button>
+            <div class="forgot">
+                <a class="forgot__link" href="#">Forgot Password?</a>
+            </div>
+        </form>
+    </div>
+
+    <div id="reset-box" class="reset">
+        <p class="reset_title">please reset your password </p>
+        <a href="#" class="close"><img src="close.png" class="img-close" title="Close Window" alt="Close" /></a>
+        <form method="post" class="reset-content" id="reset-content" action="#">
+            <label class="username">
+                <span>New password</span>
+                <input id="new-password" name="new password" value="" type="password" placeholder="Enter new password" />
+                <div id="reset_error"></div>
+            </label>
+            <label class="password">
+                <span>Confirm password</span>
+                <input id="confirm-password" name="password" value="" type="password" placeholder="Confirm your password"/>
+                <div id="confirm_error"></div>
+            </label>
+            <button class="submit-button" id="save" type="button">
+                Save
+            </button>
+          
+        </form>
+    </div>
+
+    <div class="success">
+        <p class="success_title">log-in successfully!!!</p>
+        <a href="#" class="close"><img src="close.png" class="img-close" title="Close Window" alt="Close" /></a>
+    </div>
+</body>
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+</html>
